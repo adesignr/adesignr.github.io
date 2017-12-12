@@ -1,2 +1,3 @@
-# adesignr.github.io
-design redaktion repo
+# designaesthetik.adesignr.com
+
+Design Redaktion Repo
