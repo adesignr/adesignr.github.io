@@ -1,0 +1,42 @@
+/**
+*
+* Designästhetik CSS File
+*
+* Start Slide CSS
+* 
+**/
+
+.main-navigation ul {
+	margin-left: auto;
+	list-style: none;
+}
+
+	.main-navigation ul .nav-item {
+		display: block;
+		text-align: right;
+		position: relative;
+	}
+
+		.main-navigation ul .nav-item a {
+			color: #fff;
+			font-size: 2.8rem;
+			padding-right: 5rem;
+		}
+
+			.main-navigation ul .nav-item a::after {
+				content:'';
+				height: 3.2rem;
+				width: 3.2rem;
+				border: 2px solid #fff;
+				border-radius: 80px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				transition: .2s;
+			}
+
+			.main-navigation ul .nav-item:hover a::after {
+				background: #fff;
+			}

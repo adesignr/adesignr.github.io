@@ -1,0 +1,24 @@
+/**
+*
+* Designästhetik CSS File
+*
+* General CSS
+* 
+**/
+
+.flex {
+	display: flex;
+}
+
+.h-center {
+	justify-content: center;
+}
+
+.v-center {
+	align-items: center;
+}
+
+.button.button-outline {
+	color: #fff;
+	border-color: #fff;
+}

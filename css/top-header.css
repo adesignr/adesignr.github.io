@@ -1,0 +1,43 @@
+/**
+*
+* Designästhetik CSS File
+*
+* Top Header CSS
+* 
+**/
+
+#top-header {
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+	#top-header .container .row {
+		height: 80px;
+	}
+
+		#top-header .container .row .column {
+			align-self: center;
+		}
+
+			#top-header .logo {
+				max-height: 60px;
+				display: block;
+				filter: brightness(0) invert(1);
+			}
+
+			#top-header .logo.hfu {
+				margin-right: auto;
+				max-height: 55px;
+			}
+
+			#top-header .logo.arp {
+				margin: 0 auto;
+			}
+
+			#top-header .logo.koblenz {
+				max-height: 35px;
+				margin-left: auto;
+			}
