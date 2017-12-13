@@ -5,3 +5,81 @@
 * Agenda CSS
 * 
 **/
+
+.tabbar {
+    margin-bottom: 1.4rem;
+}
+
+.tabbar .tab {
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.tabbar .tab span {
+    transition: .2s;
+    cursor: pointer;
+}
+
+.tabbar .tab span:hover, .tabbar .tab.active span {
+    border-bottom: 1px solid #fff;
+    padding-bottom: .5rem;
+}
+
+
+.agenda-list {
+    position: relative;
+}
+
+.agenda-list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    background: #fff;
+    height: calc(100% - 2rem - 2px);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.agenda-list .agenda-entry {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.agenda-list .agenda-entry.first {
+    margin-top: 0;
+}
+
+.agenda-list .agenda-entry.row .column.column-45 {
+    flex: 0 0 45%;
+    max-width: 45%
+}
+
+.agenda-list .agenda-entry .row .column.column-10 {
+    flex: 0 0 10%;
+    max-width: 10%
+}
+
+.agenda-list .agenda-entry .time {
+    text-align: right;
+}
+
+.agenda-list .agenda-entry .dot .circle {
+    border: 2px solid #fff;
+    border-radius: 80px;
+    height: 2.4rem;
+    width: 2.4rem;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.agenda-list .agenda-entry .desc .speaker, .agenda-list .agenda-entry .desc .topic {
+	display: block;
+}
+
+.agenda-list .agenda-entry .desc .topic {
+	font-weight: 500;
+}
