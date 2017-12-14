@@ -28,6 +28,7 @@
 
 .agenda-list {
     position: relative;
+    overflow: hidden;
 }
 
 .agenda-list::before {
