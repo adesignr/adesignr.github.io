@@ -193,7 +193,7 @@
                             </div>
                         </div>
                         <div class="row h-center">
-                            <a class="button button-outline expand" href="#">Weitere öffnen</a>
+                            <a class="button button-outline" href="#">Mehr anzeigen</a>
                         </div>
                     </div>
                     <div id="agenda-friday" class="agenda-list hide">
@@ -328,7 +328,7 @@
                             </div>
                         </div>
                         <div class="row h-center">
-                            <a class="button button-outline expand" href="#">Weitere öffnen</a>
+                            <a class="button button-outline" href="#">Mehr anzeigen</a>
                         </div>
                     </div>
                     <div id="agenda-saturday" class="agenda-list hide">
@@ -429,7 +429,7 @@
                             </div>
                         </div>
                         <div class="row h-center">
-                            <a class="button button-outline expand" href="#">Weitere öffnen</a>
+                            <a class="button button-outline" href="#">Mehr anzeigen</a>
                         </div>
                     </div>
                 </div>
@@ -535,75 +535,7 @@
             </section>
         </div>
     </div>
-    <script>
-    function initMap() {
-        var arp = { lat: 50.631225, lng: 7.207031 };
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: arp
-        });
-        var marker = new google.maps.Marker({
-            position: arp,
-            map: map
-        });
-
-    }
-
-    (function() {
-
-        var agenda = document.getElementById('agenda'),
-            tabs = agenda.getElementsByClassName('tab'),
-            heights = [],
-            agenda_lists = agenda.getElementsByClassName('agenda-list'),
-            agenda_buttons = agenda.getElementsByClassName('button'),
-            tab_click = function() {
-
-                var id = this.id;
-
-                for (var i = 0; i < tabs.length; i++) {
-                    tabs[i].classList.remove('active');
-                    agenda_lists[i].classList.add('hide');
-
-                }
-
-                this.classList.add('active');
-
-                document.getElementById('agenda-' + id).classList.remove('hide');
-
-            },
-            agenda_expand = function(i) {
-
-                if (this.classList.contains('expand')) {
-                    this.parentElement.style.maxHeight = heights[i] + 'px';
-                    this.classList.remove('expand');
-                } else {
-                    this.parentElement.style.maxHeight = 'none';
-                    this.classList.add('expand');
-                }
-
-            };
-
-
-
-        for (var i = 0; i < tabs.length; i++) {
-            var list_height = agenda_lists[i].getElementsByClassName('agenda-entry')[0].offsetHeight + agenda_lists[i].getElementsByClassName('agenda-entry')[1].offsetHeight + agenda_lists[i].getElementsByClassName('agenda-entry')[2].offsetHeight + agenda_lists[i].getElementsByClassName('agenda-entry')[3].offsetHeight + agenda_lists[i].getElementsByClassName('agenda-entry')[agenda_lists[i].getElementsByClassName('agenda-entry').length - 1].offsetHeight;
-
-            heights.push(list_height);
-
-
-
-            agenda_lists[i].getElementsByClassName('wrap')[0].style.maxHeight = 'calc(' + list_height + 'px + 8rem)';
-            console.log(heights);
-            console.log(list_height + 'px');
-
-            tabs[i].addEventListener('click', tab_click);
-
-            agenda_buttons[i].addEventListener('click', function() { agenda_expand(i) });
-
-        }
-
-    })();
-    </script>
+    <script src="/js/arp.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbuT_9P20esPPH0BbudX_NwQd9uOkOI-0&lang=de&region=DE&callback=initMap"></script>
 </body>
 

@@ -18,15 +18,13 @@
 	align-items: center;
 }
 
-.button.button-outline {
+.button.button-outline, .button.button-outline:hover, .button.button-outline:focus {
 	color: #fff;
 	border-color: #fff;
 	transition: box-shadow .2s;
 }
 
 .button.button-outline:hover {
-	color: #fff;
-	border-color: #fff;
 	box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.5);
 }
 
