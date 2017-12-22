@@ -13,7 +13,8 @@ function initMap() {
 
 (function() {
 
-    var agenda = document.querySelector('#agenda'),
+    var scroll = new SmoothScroll('a[href*="#"]'),
+        agenda = document.querySelector('#agenda'),
         tabs = agenda.querySelectorAll('.tab'),
         heights = [],
         agenda_lists = agenda.querySelectorAll('.agenda-list'),
