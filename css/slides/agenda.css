@@ -13,6 +13,7 @@
 .tabbar .tab {
     text-align: center;
     font-size: 2.8rem;
+    margin-bottom: 1rem;
 }
 
 .tabbar .tab span {
@@ -41,34 +42,22 @@
     position: absolute;
     width: 2px;
     background: #fff;
-    height: calc(100% - 2rem - 2px);
+    height: calc(100% - 2px);
     top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    left: 2rem;
 }
 
 .agenda-list .agenda-entry {
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .agenda-list .agenda-entry.first {
     margin-top: 0;
 }
 
-.agenda-list .agenda-entry.row .column.column-45 {
-    flex: 0 0 45%;
-    max-width: 45%
-}
-
-.agenda-list .agenda-entry .row .column.column-10 {
-    flex: 0 0 10%;
-    max-width: 10%
-}
-
-.agenda-list .agenda-entry .time {
-    text-align: right;
+.agenda-list .agenda-entry .time, .agenda-list .agenda-entry .desc {
+    margin-left: 5rem;
 }
 
 .agenda-list .agenda-entry .dot .circle {
@@ -77,7 +66,7 @@
     height: 2.4rem;
     width: 2.4rem;
     display: block;
-    margin: 0 auto;
+    margin: 0 0 0 .9rem;
     background: #fff;
 }
 
@@ -87,4 +76,45 @@
 
 .agenda-list .agenda-entry .desc .topic {
 	font-weight: 500;
+}
+
+@media (min-width: 40.0rem) {
+
+    .tabbar .tab {
+        margin-bottom: 0;
+    }
+
+    .agenda-list .wrap::before {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: calc(100% - 2rem - 2px);
+    }
+
+    .agenda-list .agenda-entry {
+        margin-bottom: 2rem;
+    }
+
+    .agenda-list .agenda-entry.row .column.column-45 {
+        flex: 0 0 45%;
+        max-width: 45%
+    }
+
+    .agenda-list .agenda-entry .time {
+        text-align: right;
+        margin-left: 0;
+    }
+
+    .agenda-list .agenda-entry .row .column.dot {
+        flex: 0 0 10%;
+        max-width: 10%
+    }
+
+    .agenda-list .agenda-entry .dot .circle {       
+       margin: 0 auto;
+    }
+
+    .agenda-list .agenda-entry .desc {
+        margin-left: 0;
+    }
 }

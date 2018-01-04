@@ -17,10 +17,12 @@
 
 	#top-header .container .row {
 		height: 80px;
+		flex-direction: row;
 	}
 
 		#top-header .container .row .column {
 			align-self: center;
+			padding: 0 1.0rem;
 		}
 
 			#top-header .logo {
