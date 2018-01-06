@@ -59,6 +59,7 @@
 
 .agenda-list .agenda-entry .time, .agenda-list .agenda-entry .desc {
     margin-left: 5rem;
+    padding-right: 5rem;
 }
 
 .agenda-list .agenda-entry .dot .circle {
@@ -103,7 +104,6 @@
 
     .agenda-list .agenda-entry .time {
         text-align: right;
-        margin-left: 0;
     }
 
     .agenda-list .agenda-entry .row .column.dot {
@@ -115,7 +115,8 @@
        margin: 0 auto;
     }
 
-    .agenda-list .agenda-entry .desc {
+    .agenda-list .agenda-entry .desc, .agenda-list .agenda-entry .time {
         margin-left: 0;
+        padding-right: 0;
     }
 }
