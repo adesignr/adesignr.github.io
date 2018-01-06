@@ -6,7 +6,12 @@
 * 
 **/
 
-.main-navigation ul {
+.main-navigation {
+	display: none;
+}
+
+@media (min-width: 40.0rem) { 
+	.main-navigation ul {
 	margin-left: auto;
 	list-style: none;
 }
@@ -40,3 +45,4 @@
 			.main-navigation ul .nav-item:hover a::after {
 				background: #fff;
 			}
+}

@@ -1,0 +1,96 @@
+/**
+*
+* Designästhetik CSS File
+*
+* Mobile Nav CSS
+* 
+**/
+
+#mobile-nav {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	/*background: #23A6D5;*/
+	z-index: 2;
+}
+
+#mobile-nav .mobile-nav-wrap {
+	width: 200vw;
+    height: 200vw;
+    position: absolute;
+    bottom: -111vw;
+    right: -100vw;
+}
+
+#mobile-nav.closed .mobile-nav-wrap {
+	transform: translateX(100%);
+}
+
+#mobile-nav .mobile-nav-wrap .mobile-nav-bg {
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    transition: .4s;
+}
+
+#mobile-nav.closed .mobile-nav-wrap .mobile-nav-bg {
+	transform: translate3d(50%,50%,0) scale3d(0,0,0);
+	transition: .4s;
+}
+
+#mobile-nav .mobile-nav-wrap .mobile-nav-list {
+	max-width: 50%;
+	text-align: right;
+	list-style: none;
+	padding: 4rem 3rem 0 0 ;
+	transition: .5s;
+	position: absolute;
+	right: 100vw;
+}
+
+#mobile-nav.closed .mobile-nav-wrap .mobile-nav-list {
+	transform: translate3d(200%,0,0);
+}
+
+#mobile-nav .mobile-nav-wrap .mobile-nav-list .mobile-nav-item a {
+	color: #fff;
+	font-size: 2rem;
+	text-transform: uppercase;
+    font-weight: 400;
+}
+
+#mobile-nav .mobile-toggle-wrap {
+	display: block;
+	width: 15vw;
+	height: 15vw;
+	background:#853886;
+	position: absolute;
+	bottom: 2rem;
+	right: 2rem;
+	border-radius: 8rem;
+	transition: .3s;
+}
+
+#mobile-nav.closed .mobile-toggle-wrap {
+	box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.25);
+	background: #9d3b9e;
+}
+
+#mobile-nav .mobile-toggle g {
+	transition: .3s;
+}
+
+#mobile-nav.open .mobile-toggle .burger, #mobile-nav.closed .mobile-toggle .close {
+	transform: translate3d(50%,50%,0) scale3d(0,0,0);
+
+}
+
+@media (min-width: 40.0rem) {
+	#mobile-nav {
+		display: none;
+	}
+}

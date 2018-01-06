@@ -11,6 +11,7 @@
     <!-- Begin Page Styles -->
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/top-header.css">
+    <link rel="stylesheet" href="/css/mobile-nav.css">
     <link rel="stylesheet" href="/css/main-content.css">
     <link rel="stylesheet" href="/css/slides/start.css">
     <link rel="stylesheet" href="/css/slides/agenda.css">
@@ -22,6 +23,33 @@
 
 <body>
     <div id="page-wrap">
+        <div id="mobile-nav" class="closed">
+            <div class="mobile-nav-wrap">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item"><a href="#start">Start</a></li>
+                    <li class="mobile-nav-item"><a href="#agenda">Agenda</a></li>
+                    <li class="mobile-nav-item"><a href="#speakers">Referenten</a></li>
+                    <li class="mobile-nav-item"><a href="#content">Inhalt</a></li>
+                    <li class="mobile-nav-item"><a href="#contact">Kontakt</a></li>
+                </ul>
+                <svg class="mobile-nav-bg" viewBox="0 0 100 100" width="100%" height="100%">
+                    <circle cx="50" cy="50" r="50" style="fill:#853886" />
+                </svg>
+            </div>
+            <div class="mobile-toggle-wrap">
+                <svg class="mobile-toggle" viewBox="0 0 80 80" width="100%" height="100%">
+                    <g class="burger">
+                        <rect x="22.5" y="24.5" rx="2" ry="2" width="35" height="5" style="fill:white;" />
+                        <rect x="22.5" y="38.5" rx="2" ry="2" width="25" height="5" style="fill:white;" />
+                        <rect x="22.5" y="52.5" rx="2" ry="2" width="35" height="5" style="fill:white;" />
+                    </g>
+                    <g class="close">
+                        <line x1="25" y1="25" x2="55" y2="55" style="stroke: white; stroke-width: 5; stroke-linecap: round;" />
+                        <line x1="25" y1="55" x2="55" y2="25" style="stroke: white; stroke-width: 5; stroke-linecap: round;" />
+                    </g>
+                </svg>
+            </div>
+        </div>
         <div id="top-header">
             <div class="container">
                 <div class="row">

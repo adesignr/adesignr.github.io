@@ -13,13 +13,21 @@ function initMap() {
 
 (function() {
 
+    //Define Our selectors first
+
     var scroll = new SmoothScroll('a[href*="#"]'),
+        mobile_nav = document.querySelector('#mobile-nav'),
+        mobile_nav_items = mobile_nav.querySelectorAll('.mobile-nav-item a'),
+        mobile_toggle = mobile_nav.querySelectorAll('.mobile-toggle'), 
+        mobile_toggle_burger = mobile_toggle[0].querySelectorAll('.burger'),
+        mobile_toggle_close = mobile_toggle[0].querySelectorAll('.close'),
         agenda = document.querySelector('#agenda'),
         tabs = agenda.querySelectorAll('.tab'),
         heights = [],
         agenda_lists = agenda.querySelectorAll('.agenda-list'),
         agenda_buttons = agenda.querySelectorAll('.button'),
         tab_click = function() {
+
             var id = this.id;
 
             for (var i = 0; i < tabs.length; i++) {
@@ -69,4 +77,17 @@ function initMap() {
     }
 
     [].forEach.call(agenda_buttons,function(e){e.addEventListener('click',function(e) { e.preventDefault(); agenda_expand(e.target, heights) },false)});
+
+    console.log(mobile_nav_items);
+
+    mobile_toggle[0].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        mobile_nav.classList.toggle('open');
+        mobile_nav.classList.toggle('closed');
+
+        console.log('click');
+    },false);
+
+    [].forEach.call(mobile_nav_items,function(e){e.addEventListener('click',function(e) { mobile_nav.classList.remove('open'); mobile_nav.classList.add('closed'); },false)});
 })();
