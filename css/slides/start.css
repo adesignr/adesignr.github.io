@@ -10,11 +10,16 @@
 	display: none;
 }
 
-@media (min-width: 40.0rem) { 
+@media (min-width: 40.0rem) {
+
+	.main-navigation {
+		display: block;
+	}
+
 	.main-navigation ul {
-	margin-left: auto;
-	list-style: none;
-}
+		margin-left: auto;
+		list-style: none;
+	}
 
 	.main-navigation ul .nav-item {
 		display: block;
