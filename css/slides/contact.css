@@ -9,3 +9,9 @@
 #map {
 	height: 300px;
 }
+
+@media (min-width: 40.0rem) {
+	#map {
+		display: none;
+	}
+}
