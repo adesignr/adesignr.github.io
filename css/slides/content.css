@@ -5,3 +5,6 @@
 * Content CSS
 * 
 **/
+img {
+	max-height: 50%;
+}
